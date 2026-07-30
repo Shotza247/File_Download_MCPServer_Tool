@@ -1,0 +1,17 @@
+[project]
+name = "mcp-server-setup"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jabulani Ndlovu", email = "jabulani.ndlovu360@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+mcp-server-setup = "mcp_server_setup:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
