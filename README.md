@@ -16,4 +16,15 @@ uv init
 
 Step three: 
 create a virtual environment and activate.
+
 ```
+uv venv
+.venv/Script/activate
+```
+
+Step four:
+adding my OpenAI mcp client connection
+```
+uv add OpenAI mcp[cli] httpx
+```
+
