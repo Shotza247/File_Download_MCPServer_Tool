@@ -28,3 +28,13 @@ adding my OpenAI mcp client connection
 uv add OpenAI mcp[cli] httpx
 ```
 
+step five:
+create mcp_server and host_client_test files
+
+```
+ni mcp_server.py
+ni host_client_test.py
+```
+code mcp_server.py
+
+step six:
