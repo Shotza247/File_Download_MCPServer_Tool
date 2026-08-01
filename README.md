@@ -38,3 +38,8 @@ ni host_client_test.py
 code mcp_server.py
 
 step six:
+if the mcp[cli] gives and issue when running the mcp_server try:
+
+```
+pip install --force-reinstall "mcp[cli]"
+```
