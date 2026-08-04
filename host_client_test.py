@@ -85,7 +85,19 @@ class MCPClient:
             for tool in tools_response.tools
         ]
 
-        messages = [{"role": "user", "content": query}]
+        messages = [
+            {
+            "role": "system",
+            "content": """You are a file-writing assistant with access to a create_file tool.
+
+            Rules:
+            - If the user asks you to write, create, draft, or produce any content — and explicitly says to save it to a file, you will use the create_file tool.
+            - If the user asks a question or wants a quick answer — respond in chat without creating a file.
+            - Always confirm to the user what file was created and where.
+            - Never make up file paths or confirm success without actually calling the tool."""
+                },
+                {"role": "user", "content": query}
+            ]
 
         # Agentic loop: keep going until the LLM stops calling tools
         while True:
