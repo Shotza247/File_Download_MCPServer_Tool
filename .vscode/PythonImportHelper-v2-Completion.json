@@ -107,6 +107,96 @@
         "documentation": {}
     },
     {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncExitStack",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "ClientSession",
+        "importPath": "mcp",
+        "description": "mcp",
+        "isExtraImport": true,
+        "detail": "mcp",
+        "documentation": {}
+    },
+    {
+        "label": "StdioServerParameters",
+        "importPath": "mcp",
+        "description": "mcp",
+        "isExtraImport": true,
+        "detail": "mcp",
+        "documentation": {}
+    },
+    {
+        "label": "stdio_client",
+        "importPath": "mcp.client.stdio",
+        "description": "mcp.client.stdio",
+        "isExtraImport": true,
+        "detail": "mcp.client.stdio",
+        "documentation": {}
+    },
+    {
+        "label": "TextContent",
+        "importPath": "mcp.types",
+        "description": "mcp.types",
+        "isExtraImport": true,
+        "detail": "mcp.types",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "MCPServer",
         "importPath": "mcp.server",
         "description": "mcp.server",
@@ -120,14 +210,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "TypedDict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
         "documentation": {}
     },
     {
@@ -497,6 +579,24 @@
         "description": ".venv.Scripts.pywin32_testall",
         "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
         "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "MCPClient",
+        "kind": 6,
+        "importPath": "host_client_test",
+        "description": "host_client_test",
+        "peekOfCode": "class MCPClient:\n    def __init__(self, model: str = MODEL):\n        self.session: Optional[ClientSession] = None\n        self.exit_stack = AsyncExitStack()\n        self.model = model\n        self.openai = OpenAI()\n    # ------------------------------------------------------------------ #\n    # 1. Connect to the MCP server                                         #\n    # ------------------------------------------------------------------ #\n    async def connect_to_server(self, server_script_path: str):",
+        "detail": "host_client_test",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL",
+        "kind": 5,
+        "importPath": "host_client_test",
+        "description": "host_client_test",
+        "peekOfCode": "MODEL = \"gpt-4o\"\nclass MCPClient:\n    def __init__(self, model: str = MODEL):\n        self.session: Optional[ClientSession] = None\n        self.exit_stack = AsyncExitStack()\n        self.model = model\n        self.openai = OpenAI()\n    # ------------------------------------------------------------------ #\n    # 1. Connect to the MCP server                                         #\n    # ------------------------------------------------------------------ #",
+        "detail": "host_client_test",
         "documentation": {}
     },
     {
